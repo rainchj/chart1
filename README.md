@@ -1,1 +1,1 @@
-# [Chart1](index.html)
+# [Chart1](chart1.md)
