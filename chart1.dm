@@ -1,1 +1,45 @@
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Viewer</h1>
+    <div class="image-container">
+        <!-- Image files -->
+        <img src="chart1/index_21456_image001.png" alt="Image 1">
+        <img src="chart1/index_21456_image002.png" alt="Image 2">
+        <img src="chart1/index_21456_image003.png" alt="Image 3">
+        <img src="chart1/index_21456_image004.png" alt="Image 4">
+        <img src="chart1/index_21456_image005.png" alt="Image 5">
+        <img src="chart1/index_21456_image006.png" alt="Image 6">
+        <img src="chart1/index_21456_image007.png" alt="Image 7">
+        <img src="chart1/index_21456_image008.png" alt="Image 8">
+        <img src="chart1/index_21456_image009.png" alt="Image 9">
+        <img src="chart1/index_21456_image010.png" alt="Image 10">
+    </div>
+</body>
+</html>
