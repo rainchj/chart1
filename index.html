@@ -10,22 +10,28 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100vh; /* 화면 전체 높이를 채움 */
+            min-height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9; /* 배경색 설정 */
+            background-color: #f9f9f9;
+            padding: 10px;
         }
         #일간_주요경제지표 {
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 10px; /* 둥근 모서리 */
+            border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            line-height: 1.8; /* 줄간격 */
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
         }
         img {
             margin-top: 10px;
-            border-radius: 8px; /* 이미지 모서리 둥글게 */
+            border-radius: 8px;
+            max-width: 100%; /* 이미지가 화면을 넘지 않도록 제한 */
+            height: auto; /* 이미지 비율 유지 */
         }
         a {
             text-decoration: none;
@@ -35,12 +41,22 @@
             text-decoration: underline;
         }
         footer {
-            position: fixed;
-            bottom: 10px;
             text-align: center;
             width: 100%;
             font-size: 14px;
             color: #555;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px; /* 작은 화면에서는 폰트 크기 조정 */
+            }
+            #일간_주요경제지표 {
+                padding: 15px; /* 패딩 축소 */
+            }
+            footer {
+                font-size: 12px; /* 푸터 텍스트 크기 조정 */
+            }
         }
     </style>
 </head>
@@ -49,16 +65,17 @@
         <h3>일간 주요경제지표</h3>
         <ul>
             <li>Version 1.0 => <strong><em><a href="https://blog.naver.com/rainchj">파일받기</a></em></strong></li>
-            <li>매일 변동되는 환율, 금리 등 주요 경제지표를 실시간으로 볼수 있는 차트입니다.</li>
+            <li>매일 변동되는 환율, 금리 등 주요 경제지표를 실시간으로 볼 수 있는 차트입니다.</li>
             <li>개인적 사용목적의 자료입니다.</li>
             <li>누구나 사적으로 사용 가능하지만 배포는 금지되며 자료는 언제든 중단될 수 있습니다.</li>
             <li>샘플화면은 아래와 같습니다.</li>
         </ul>
-        <img src="/img/주요경제지표일간.jpg" alt="설명 텍스트" width="900" height="600">
+        <img src="/img/주요경제지표일간.jpg" alt="설명 텍스트">
     </div>
     <footer>
         made by rainchj, <a href="https://blog.naver.com/rainchj">https://blog.naver.com/rainchj</a>
     </footer>
 </body>
 </html>
+
 
