@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh; /* 화면 전체 높이를 채움 */
@@ -15,7 +16,6 @@
             background-color: #f9f9f9; /* 배경색 설정 */
         }
         #주요경제지표일간 {
-            /* text-align: center; 내부 콘텐츠 정렬 */
             background: #fff;
             border: 1px solid #ddd;
             border-radius: 10px; /* 둥근 모서리 */
@@ -34,6 +34,14 @@
         a:hover {
             text-decoration: underline;
         }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+            color: #555;
+        }
     </style>
 </head>
 <body>
@@ -46,8 +54,9 @@
         </ul>
         <img src="/img/주요경제지표일간.jpg" alt="설명 텍스트" width="900" height="600">
     </div>
-    <div>
-        <p>made by rainchj, <a href="https://blog.naver.com/rainchj">https://blog.naver.com/rainchj</a></p>
-    </div>
+    <footer>
+        made by rainchj, <a href="https://blog.naver.com/rainchj">https://blog.naver.com/rainchj</a>
+    </footer>
 </body>
 </html>
+
