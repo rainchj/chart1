@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유행살이 공유자료 2</title>
+
+    <script>
+        function sharePage(event) {
+            event.preventDefault(); // 기본 링크 이동 방지
+            if (navigator.share) {
+                navigator.share({
+                    title: '유행살이 공유자료',
+                    text:  '주요 경제지표 현황, 부동산지표 현황 등 제공',
+                    url: 'http://rainchj.github.io'
+                }).then(() => {
+                    console.log('공유 성공!');
+                }).catch((error) => {
+                    console.error('공유 실패:', error);
+                });
+            } else {
+                alert('공유 기능을 지원하지 않는 브라우저입니다.');
+            }
+        }
+    </script>
+    
     <style>
         body {
             display: flex;
@@ -16,6 +36,39 @@
             padding: 10px;
         }
         #공지사항 {
+            background: #fff;
+            border: 1px solid #ddd;
+            /* border-radius: 10px; */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+        }
+        #주요경제지표 {
+            background: #fff;
+            border: 1px solid #ddd;
+            /* border-radius: 10px; */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+        }
+        #아파트가격동향조사 {
+            background: #fff;
+            border: 1px solid #ddd;
+            /* border-radius: 10px; */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+        }
+        #아파트실거래가 {
             background: #fff;
             border: 1px solid #ddd;
             /* border-radius: 10px; */
@@ -56,7 +109,7 @@
         }
     </style>
 </head>
-    
+
 <body>
     <div id="공지사항">
         <h2>유행살이 공유자료 2</h2>
@@ -66,11 +119,12 @@
         </ul>
         <h3>공유자료 바로가기</h3>
         <ul>
-            <li><a href="/index.html">공유자료1</a> : 주간지표 현황</li>
-            <li><a href="/index2.html">공유자료2</a> : 월간지표 현황</li>
-            <li><a href="/index3.html">공유자료3</a> : 시도별 주택 현황</li>
+            <li><a href="/index.html"><b>공유자료1</b></a> : 주간지표 현황</li>
+            <li><a href="/index2.html"><b>공유자료2</b></a> : 월간지표 현황</li>
+            <li><a href="/index3.html"><b>공유자료3</b></a> : 시도별 주택 현황</li>
         </ul>
-        <p>☞  <a href="https://rainchj.github.io/homeicon.html">휴대폰 홈화면에 바로가기 아이콘 만들기</a></p>
+        <br>☞  카카오톡, 메일에 사이트주소 <a href="#" onclick="sharePage(event)"><b>보내기</b></a>
+        <br>☞  휴대폰 홈화면에 바로가기 아이콘 <a href="https://rainchj.github.io/homeicon.html"><b>만들기</b></a>
     </div>
     <br>
     <br>    
