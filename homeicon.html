@@ -22,20 +22,80 @@
     <meta name="msapplication-TileImage" content="icon.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="none">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+        #홈화면아이콘 {
+            background: #fff;
+            border: 1px solid #ddd;
+            /* border-radius: 10px; */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+        }
+        img {
+            margin-top: 10px;
+            /* border-radius: 8px; */
+            max-width: 100%; /* 이미지가 화면을 넘지 않도록 제한 */
+            height: auto; /* 이미지 비율 유지 */
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            width: 100%;
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px; /* 작은 화면에서는 폰트 크기 조정 */
+            }
+            footer {
+                font-size: 12px; /* 푸터 텍스트 크기 조정 */
+            }
+        }
+    </style>
 </head>
+
 <body>
+    <div id="홈화면아이콘">
+        <h3>□ 홈 화면 바로가기 만들기</h3>
+        <ul>
+            <li>사용하는 브라우저 메뉴에서 추가 선택 
+                <p>엣지: 오른쪽밑 일3개 => "휴대폰에 추가" 선택</p>
+                <p>크롬: 오른쪽위 점3개 => "홈화면에 추가" 선택</p>
+            </li>
+            <li><p>"홈 화면에 추가" 에서 "바로가기 만들기" 선택</p></li>
+            <li><p>"추가" 선택</p></li>
+            <li><p>"추가" 선택</p></li>
+            <li><p>홈화면에 "주요지표현황" 아이콘 생성 확인</p></li>
+        </ul>	
+    </div>
     <br>
-    <h2> □ 홈 화면 바로가기 만들기</h2>
-    <ul>
-        <li>사용하는 브라우저 메뉴에서 추가 선택 
-            <p>엣지: 오른쪽밑 일3개 => "휴대폰에 추가" 선택</p>
-            <p>크롬: 오른쪽위 점3개 => "홈화면에 추가" 선택</p>
-        </li>
-        <li><p>"홈 화면에 추가" 에서 "바로가기 만들기" 선택</p></li>
-        <li><p>"추가" 선택</p></li>
-        <li><p>"추가" 선택</p></li>
-        <li><p>홈화면에 "주요지표현황" 아이콘 생성 확인</p></li>
-    </ul>
+    <br>    
+    <footer>
+        made by rainchj, <a href="https://blog.naver.com/rainchj" target="_blank">https://blog.naver.com/rainchj</a>
+    </footer>
 </body>
 </html>
 
