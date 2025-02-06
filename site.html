@@ -35,6 +35,17 @@
             background-color: #f9f9f900;
             padding: 10px;
         }
+        #공지사항 {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            /* border-radius: 10px; */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.8;
+            max-width: 100%; /* 화면 너비에 맞춤 */
+            width: 100%; /* 기본적으로 전체 너비 사용 */
+            box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+        }
         #경제 {
             background: #ffffff;
             border: 1px solid #ddd;
@@ -101,7 +112,14 @@
 
 <body>
     <img src="/imgtitle.png" alt="설명 텍스트">
-    
+
+    <div id="공지사항">
+        <h2 style="color: rgb(0, 0, 0);">유용한 사이트 모음</h2>
+        ☞ <a href="/index.html">자료더보기</a>
+    </div>
+
+    <br>
+
     <div id="경제">
         <h2 style="color: rgb(0, 0, 0);">경제</h2>
         <img src="/imgeconomy.png" alt="설명 텍스트">
@@ -168,7 +186,7 @@
     <br>    
     
     <footer>
-        made by 유행살이, <a href="https://blog.naver.com/rainchj">https://blog.naver.com/rainchj</a>
+        made by <a href="https://blog.naver.com/rainchj">유행살이</a>, mailto: <a href="mailto:rainchj@naver.com?subject=문의사항&body=">rainchj@naver.com</a>
     </footer>
 </body>
 </html>
