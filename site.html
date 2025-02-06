@@ -42,9 +42,10 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
-            max-width: 100%; /* 화면 너비에 맞춤 */
+            max-width: 900px; /* 화면 너비에 맞춤 */
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+            margin: 0 auto; /* 수평 중앙 정렬 */
         }
         #경제 {
             background: #ffffff;
@@ -53,9 +54,10 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
-            max-width: 100%; /* 화면 너비에 맞춤 */
+            max-width: 900px; /* 화면 너비에 맞춤 */
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+            margin: 0 auto; /* 수평 중앙 정렬 */
         }
         #부동산 {
             background: #fff;
@@ -64,9 +66,10 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
-            max-width: 100%; /* 화면 너비에 맞춤 */
+            max-width: 900px; /* 화면 너비에 맞춤 */
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+            margin: 0 auto; /* 수평 중앙 정렬 */
         }
         #블로그 {
             background: #fff;
@@ -75,15 +78,20 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
-            max-width: 100%; /* 화면 너비에 맞춤 */
+            max-width: 900px; /* 화면 너비에 맞춤 */
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+            margin: 0 auto; /* 수평 중앙 정렬 */
         }
         img {
             margin-top: 10px;
             /* border-radius: 8px; */
             max-width: 100%; /* 이미지가 화면을 넘지 않도록 제한 */
             height: auto; /* 이미지 비율 유지 */
+        }
+        .center-img {
+            display: block;
+            margin: 0 auto;
         }
         a {
             text-decoration: none;
@@ -111,7 +119,7 @@
 </head>
 
 <body>
-    <img src="/imgtitle.png" alt="설명 텍스트">
+    <img src="/imgtitle.png" alt="설명 텍스트" class="center-img">
 
     <div id="공지사항">
         <h2 style="color: rgb(0, 0, 0);">유용한 사이트 모음</h2>

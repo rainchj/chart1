@@ -46,7 +46,7 @@
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             line-height: 1.8;
-            max-width: 100%; /* 화면 너비에 맞춤 */
+            max-width: 100%;
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
         }
@@ -97,6 +97,10 @@
             max-width: 100%; /* 이미지가 화면을 넘지 않도록 제한 */
             height: auto; /* 이미지 비율 유지 */
         }
+        .center-img {
+            display: block;
+            margin: 0 auto;
+        }
         a {
             text-decoration: none;
             color: #007bff;
@@ -123,7 +127,7 @@
 </head>
 
 <body>
-    <img src="/imgtitle.png" alt="설명 텍스트">
+    <img src="/imgtitle.png" alt="설명 텍스트" class="center-img">
     
     <div id="공지사항">
         <h2 style="color: rgb(0, 0, 0);">유행살이 공유자료 1</h2>
