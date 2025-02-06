@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간단한 게시판</title>
+  <script>
+    // 게시물 목록을 로드하는 함수
+    function loadPosts() {
+      google.script.run.withSuccessHandler(function(posts) {
+        var postsContainer = document.getElementById('posts');
+        postsContainer.innerHTML = '';  // 기존 게시물 삭제
+
+        // 게시물 출력
+        posts.forEach(function(post) {
+          var postElement = document.createElement('div');
+          postElement.innerHTML = `<strong>${post.timestamp}</strong><br>${post.content}<br><br>`;
+          postsContainer.appendChild(postElement);
+        });
+      }).getPosts();
+    }
+
+    // 게시물을 등록하는 함수
+    function postMessage() {
+      var content = document.getElementById('content').value;
+      if (content) {
+        google.script.run.withSuccessHandler(function() {
+          alert('게시물이 등록되었습니다.');
+          loadPosts();  // 게시물 목록 새로고침
+        }).postMessage(content);
+      }
+    }
+
+    // 페이지 로드 후 게시물 목록 로드
+    window.onload = function() {
+      loadPosts();
+    };
+  </script>
+</head>
+<body>
+  <h1>간단한 게시판</h1>
+
+  <div id="posts"></div>
+
+  <h2>새 게시물 작성</h2>
+  <textarea id="content" placeholder="내용을 입력하세요..." rows="4" cols="50"></textarea><br><br>
+  <button onclick="postMessage()">게시물 등록</button>
+</body>
+</html>
