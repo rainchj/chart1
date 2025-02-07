@@ -7,10 +7,14 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 중앙 정렬 */
+            min-height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             padding: 10px;
-            background-color: #f4f4f4;
         }
         .container {
             width: 80%;
@@ -21,12 +25,14 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        h2 {
+            text-align: center; /* 중앙 정렬 */
+        }
         textarea {
             width: 100%;
             height: 100px;
             margin-right: 20px;
             padding: 10px;
-
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
@@ -39,6 +45,8 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: 1rem;
+            display: block; /* 블록 요소로 변경 */
+            margin: 20px auto; /* 중앙 정렬 */
         }
         button:hover {
             background-color: #45a049;
@@ -61,14 +69,23 @@
             font-size: 0.8rem;
             color: #666;
         }
+        @media (max-width: 600px) {
+            body {
+                font-size: 14px;
+            }
+            button {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h2>머물다 간 흔적 남기기</h2>
+        <br>
         <form id="postForm">
-            <label for="content">자료는 자유롭게 이용하시고, 인용시에는 출처를 명시해주세요.</label>
+            <label for="content"></label>
             <textarea id="content" required></textarea><br>
             <button type="submit">게시글 작성</button>
         </form>
