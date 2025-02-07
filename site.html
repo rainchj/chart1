@@ -6,22 +6,14 @@
     <title>주요 사이트 등</title>
 
     <script>
-        function sharePage(event) {
-            event.preventDefault(); // 기본 링크 이동 방지
-            if (navigator.share) {
-                navigator.share({
-                    title: '유행살이 공유자료',
-                    text:  '주요 경제지표 현황, 부동산지표 현황 등 제공',
-                    url: 'http://rainchj.github.io'
-                }).then(() => {
-                    console.log('공유 성공!');
-                }).catch((error) => {
-                    console.error('공유 실패:', error);
-                });
-            } else {
-                alert('바로가기 설치후 가능합니다.');
-            }
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("https://script.google.com/macros/s/AKfycbzqseDk9zvMLOJ7F3nZ1pGeczko5eRFmyI2Ol2bd8nRkOROMxk35CJmsIs9jm8PuyhM/exec")
+                .then(response => response.text())
+                .then(count => {
+                    document.getElementById("counter").innerText = count;
+                })
+                .catch(error => console.error("Error:", error));
+        });
     </script>
     
     <style>
@@ -194,6 +186,7 @@
     <br>    
     
     <footer>
+        <em>(총조회수 <span id="counter">로딩중</span>)</em><br>
         made by <a href="https://blog.naver.com/rainchj">유행살이</a>, mailto: <a href="mailto:rainchj@naver.com?subject=문의사항&body=">rainchj@naver.com</a>
     </footer>
 </body>
