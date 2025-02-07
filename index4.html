@@ -25,6 +25,15 @@
             }
             displayImageDate('주민등록인구', '주민등록인구-date', 'https://rainchj.github.io/image3/주민등록인구.jpg');
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("https://script.google.com/macros/s/AKfycbzqseDk9zvMLOJ7F3nZ1pGeczko5eRFmyI2Ol2bd8nRkOROMxk35CJmsIs9jm8PuyhM/exec")
+                .then(response => response.text())
+                .then(count => {
+                    document.getElementById("counter").innerText = count;
+                })
+                .catch(error => console.error("Error:", error));
+        });
     </script>
     
     <style>
@@ -206,6 +215,7 @@
     <br>    
     
     <footer>
+        <em>(총방문자수 <span id="counter">로딩중</span>)</em><br>
         made by <a href="https://blog.naver.com/rainchj">유행살이</a>, mailto: <a href="mailto:rainchj@naver.com?subject=문의사항&body=">rainchj@naver.com</a>
     </footer>
 </body>
