@@ -33,7 +33,7 @@
             }
 
             displayImageDate('아파트가격동향조사', '아파트가격동향조사-date', 'https://rainchj.github.io/weekly/아파트가격동향조사.jpg');
-            displayImageDate('KB단지시세', 'KB단지시세-date', 'https://rainchj.github.io/weekly/KB단지시세.jpg');
+            displayImageDate('매매색분포', '매매색분포-date', 'https://rainchj.github.io/weekly/매매색분포.jpg');
             displayImageDate('실거래가서울', '실거래가서울-date', 'https://rainchj.github.io/weekly/실거래가_서울.jpg');
         });
     </script>
@@ -75,7 +75,7 @@
             margin: 0;
             box-shadow: none;
         }
-        #KB단지시세 {
+        #KB색분포 {
             background: #fff;
             border: 1px solid #ddd;
             padding: 20px;
@@ -85,7 +85,7 @@
             width: 100%; /* 기본적으로 전체 너비 사용 */
             box-sizing: border-box; /* 패딩 포함한 너비 계산 */
         }
-        #KB단지시세 img {
+        #KB색분포 img {
             border: none;
             padding: 0;
             margin: 0;
@@ -142,7 +142,7 @@
         <h2 style="color: rgb(0, 0, 0);">유행살이 공유자료 Weekly</h2>
         <ul>
             <li>KB부동산 아파트가격동향조사</li>
-            <li>서울 주요 대단지 KB시세</li>
+            <li>KB부동산 가격지수증감율 색분포</li>
             <li>국토교통부 아파트실거래가</li>
         </ul>
         ☞ <a href="/index.html">자료더보기</a>
@@ -163,15 +163,21 @@
     
     <br>
 
-    <div id="KB단지시세">
-        <h2>서울 주요 대단지 KB시세</h2>
+    <div id="KB색분포">
+        <h2>KB부동산 가격지수증감율 색분포</h2>
         <ul>
             <li>Version_1.0</li>
-            <li>서울 대단지(총세대 1000 이상, 동일평형 700 이상, 전용면적 50m2 이상) KB시세입니다.</li>
-            <li><b id="KB단지시세-date"></b> 수정 (매주 업데이트)</li>
+            <li>수도권 전체의 주간 가격지수증감율을 색분포와 함께 볼 수 있습니다.</li>
+            <li><b id="매매색분포-date"></b> 수정 (매주 업데이트)</li>
         </ul>
-        <img id="KB단지시세" src="https://rainchj.github.io/weekly/KB단지시세.jpg" alt="설명 텍스트">
-        <br>☞ <a href="https://rainchj.github.io/weekly/KB단지시세.jpg" download>이미지</a>
+        <h3>매매가격지수증감율 색분포</h3>
+        <img id="매매색분포" src="https://rainchj.github.io/weekly/매매색분포.jpg" alt="설명 텍스트">
+        <br>☞ <a href="https://rainchj.github.io/weekly/매매색분포.jpg" download>이미지</a>
+        <br>
+        <br>
+        <h3>전세가격지수증감율 색분포</h3>
+        <img src="https://rainchj.github.io/weekly/전세색분포.jpg" alt="설명 텍스트">
+        <br>☞ <a href="https://rainchj.github.io/weekly/전세색분포.jpg" download>이미지</a>
     </div>
     
     <br>   
